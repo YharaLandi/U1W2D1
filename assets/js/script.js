@@ -135,15 +135,16 @@ const perimetro = latoA + latoB + latoC;
 let tipoTriangolo;
 
 switch(true) {
-    case latoA === latoB && latoB === latoC:
-        tipoTriangolo = 'equilatero';
+    case latoA === latoB && latoB === latoC: 
+        tipoTriangolo = 'equilatero';//tutte le cost devono essere uguali in pratica
         break;
     case latoA === latoB || latoB === latoC || latoA === latoC:
-        tipoTriangolo = 'isoscele';
+        tipoTriangolo = 'isoscele'; //se una delle due cons(i lati) sono uguali
         break;
-    case latoA !== latoB && latoB !== latoC && latoC !== latoA:
-        tipoTriangolo = 'scaleno';
+case latoA !== latoB && latoB !== latoC && latoC !== latoA:
+        tipoTriangolo = 'scaleno'; //tutti i lati diversi (!== per disuguaglianza e && per confronto)
         break;
 }
 
+console.log(`Triangolo ${tipoTriangolo}, perimetro ${perimetro}`);
 console.log(`Triangolo ${tipoTriangolo}, perimetro ${perimetro}`);
